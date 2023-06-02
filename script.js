@@ -86,7 +86,7 @@ function updateTable(grupo) {
           <td>${peca.descricao}</td>
           <td>${peca.grupo}</td>
           <td>${peca.localizacao}</td>
-          <td><img src="${peca.imagem}" alt="Imagem da peça ${peca.nome}" height="150" width="150"></td>
+          <td><img src="${peca.imagem}" alt="Imagem da peça ${peca.nome}" height="140" width="150" left"80"></td>
         </tr>
       `;
       tableBody.innerHTML += row;
