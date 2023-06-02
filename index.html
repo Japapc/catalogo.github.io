@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>Catálogo de Peças</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Catálogo de Peças</h1>
+        <nav>
+          <ul>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Catálogo</a>
+              <div class="dropdown-content">
+                <a href="#" class="active">Abrasivos</a>
+                <a href="#">Colhedora</a>
+                <a href="#">Eletrica</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <table>
+          <thead>
+            <tr>
+              <th>CHB</th>
+              <th>Descrição</th>
+              <th>Grupo</th>
+              <th>Localização</th>
+              <th>Imagem</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
