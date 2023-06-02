@@ -8,6 +8,7 @@ body {
   background-color: #383838;
   color: #f9f9f9;
   font-family: sans-serif;
+
 }
 
 .container {
@@ -119,3 +120,14 @@ image {
   position: relative; transition: all "NULO";
 
 }
+#imagem-ampliada {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 9999;
+    
+ }

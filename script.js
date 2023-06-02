@@ -104,3 +104,8 @@ navLinks.forEach((link) => {
     updateTable(link.innerText);
   });
 });
+function ampliarimagem(imagem) {
+  var imagemAmpliada = document.createElement('div');
+  imagemAmpliada.id = 'imagem ampliada';
+  imagemAmpliada.innerHTML
+}  
