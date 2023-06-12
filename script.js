@@ -86,7 +86,7 @@ function updateTable(grupo) {
           <td>${peca.descricao}</td>
           <td>${peca.grupo}</td>
           <td>${peca.localizacao}</td>
-          <td><img src="${peca.imagem}" alt="Imagem da peça ${peca.nome}" height="140" width="150" left"80"></td>
+          <td><img src="${peca.imagem}" alt="Imagem da peça ${peca.nome}" height="150" width="150" left"80"></td>
         </tr>
       `;
       tableBody.innerHTML += row;
@@ -94,7 +94,7 @@ function updateTable(grupo) {
   });
 }
 
-updateTable("Carro"); // exibir as peças de carro por padrão
+updateTable("Abrasivos"); // exibir as peças de Abrasivos por padrão
 
 navLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
@@ -104,8 +104,27 @@ navLinks.forEach((link) => {
     updateTable(link.innerText);
   });
 });
-function ampliarimagem(imagem) {
-  var imagemAmpliada = document.createElement('div');
-  imagemAmpliada.id = 'imagem ampliada';
-  imagemAmpliada.innerHTML
-}  
+
+function filterTable() {
+  const input = document.getElementById("search-input");
+  const filter = input.value.toUpperCase();
+  const rows = tableBody.getElementsByTagName("tr");
+
+  for (let i = 0; i < rows.length; i++) {
+    const nomeColumn = rows[i].getElementsByTagName("td")[0];
+    const descricaoColumn = rows[i].getElementsByTagName("td")[1];
+    if (nomeColumn && descricaoColumn) {
+      const nomeValue = nomeColumn.textContent || nomeColumn.innerText;
+      const descricaoValue = descricaoColumn.textContent || descricaoColumn.innerText;
+      if (nomeValue.toUpperCase().indexOf(filter) > -1 || descricaoValue.toUpperCase().indexOf(filter) > -1) {
+        rows[i].style.display = "";
+      } else {
+        rows[i].style.display = "none";
+      }
+    }
+  }
+}
+
+document.getElementById("search-input").addEventListener("input", function() {
+  filterTable();
+});

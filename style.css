@@ -120,14 +120,30 @@ image {
   position: relative; transition: all "NULO";
 
 }
-#imagem-ampliada {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  background-color: rgba(0,0,0,0.7);
-  z-index: 9999;
-    
- }
+
+#table-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  transition: transform 0.3s;
+}
+
+img:hover {
+  transform: scale(1.2);
+  width: 300px;
+  height: 300px;
+}
